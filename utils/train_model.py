@@ -102,7 +102,9 @@ def train(Config,
             if Config.train_ver == 'sum': 
                 alpha = Config.alpha  
                 sum_score = alpha * main_score + (1 - alpha) * tmp_score
-                div_score = (main_score - 1 + 2*tmp_score) / sum_score 
+                #div_score = (main_score - 1 + 2*tmp_score) / sum_score  // bias + 1 - p 
+                elp_score = ( 3 * tmp_score - main_score) * alpha 
+                div_score = elp_score / sum_score 
                 div_score = div_score.detach() 
 
             if Config.train_ver == 'mul': 
