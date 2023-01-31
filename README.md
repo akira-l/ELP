@@ -4,6 +4,9 @@
 
 This project is an implementation of [*A Simple Episodic Linear Probe Improves Visual Recognition in the Wild*]
 
+## Insight
+* A simple online linear probe can boost recognition performances. The simple regularization leads to better performances without complex network designs or additional data.
+
 ## Requirements
 
 Python 3 & Pytorch >= 0.4.0 
